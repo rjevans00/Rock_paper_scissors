@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <title>Rock, Paper or Scissors?</title>
+<body>
+	<button type="button" onclick="playRound()"> Play!</button>
+<script>
+
+//computer selection
+function computerPlay() {
+   var RPSArray = ["Rock", "Paper" , "Scissors"]
+   return RPSArray[MAth.floor(Math.random() * RPSArray.length)]
+}
+
+//game points
+var win=0;
+var loss=0;
+
+
+//play round
+function playRound(playerSelection, computerSelection) {
+	 if (playerSelection.toLowerCase() === "Rock")
+	 	if (computerSelection === "Scissors") {
+	 		return "Congrats!! Rock beats Scissors";
+	 		win++ //adds to score
+	 	}	else if (computerSelection === "Paper") {
+	 		return "You lose!! Paper beats Rock :(";
+	 		loss++
+	 	}   else {
+	 	    return "Tied match!"
+	 	}    	
+
+     else if (playerSelection.toLowerCase() === "Paper") {
+    	 if (computerSelection === "Rock") {
+    		return "Awesome!! Paper beats Rock";
+    		win++
+    	}	else if (computerSelection === "Scissors") {
+    		return "Unlucky!! Scissors beats Paper";
+    		loss++	
+    		else
+    		return "Tied match"
+    	}		
+
+
+</script>
+</body>
+</html>
